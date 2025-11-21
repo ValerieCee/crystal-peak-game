@@ -1,0 +1,52 @@
+<!-- Entry point for the web game site -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏔️ Crystal Peak</h1>
+        <p class="subtitle">Collect crystals and avoid the yeti!</p>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        </div>
+        
+        <div class="controls">
+            <p><strong>Controls:</strong> ← → Arrow Keys to move | ↑ Arrow Key to jump</p>
+            <p><strong>Goal:</strong> Collect all crystals before your rival!</p>
+        </div>
+        
+        <div id="ui">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Your Score:</span>
+                    <span id="playerScore">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Rival Score:</span>
+                    <span id="rivalScore">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Crystals Left:</span>
+                    <span id="crystalsLeft">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <div class="game-over-content">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <p id="gameOverMessage">Message</p>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
